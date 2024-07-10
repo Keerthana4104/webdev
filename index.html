@@ -1,190 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="portfolio/styles.css">
-
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App With JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="left">
-      <a href="/">Portfolio</a>
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter your location" class="input-box">
+
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
+        </div>
+
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="/img/404.jpg" alt="404 Error">
+        </div>
+
+        <div class="weather-body">
+            <img src="/img/cloud.png" alt="Weather Image" class="weather-img">
+
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">light rain</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-speed">12Km/H</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="right">
-      
-      <!--<div class="links">-->
-        <a href="#skills">
-          <i class="fa-solid fa-code"></i>
-          <span>Skills</span>
-        </a>
-        
-        <a href="#testimony">
-          <i class="fa-solid fa-pen"></i>
-          <span>Projects</span>
-        </a>
-        
-        <a href="#contact">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Contact</span>
-        </a>
-      <!--/div>-->
-    </div>
-  </nav>
 
-  <main>
-    <!-- SECTION 1: Hero -->
-    <section class="hero-section">
-      <div class="text">
-        <h2>Hi, I'm Keerthana Eslavath👋</h2>
-        <p>I thrive on crafting user-centric web apps and mobile experiences. It's a dedication that fuels my constant learning. I leverage UI/UX design principles alongside HTML, CSS, JavaScript, Node.js, and React.js to translate ideas into intuitive and visually appealing digital products. My journey is fueled by a dedication to mastering these skills and creating experiences that users love.</p>
-        
-        <div class="links">
-            <a href="#contact">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Contact me</span>
-              </a>
-          
-          <a href="img/ResumeKpe (1).pdf">
-            <span>My Resume</span>
-          </a>
-          
-        </div>
-      </div>
-
-      <div class="headshot">
-        <img src="img/Screenshot 2024-06-24 165115.png" alt="john doe headshot">
-      </div>
-    </section>
-
-    <!-- SECTION 2: Skills -->
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?
-      </div>
-
-      <div class="cells">
-        <div class="cell">
-          <img src="img/Screenshot 2024-06-24 163357.png" alt="html logo">
-          <span>HTML</span>
-        </div>
-        
-        <div class="cell">
-          <img src="img/Screenshot 2024-06-24 163337.png" alt="css logo">
-          <span>CSS</span>
-        </div>
-        
-        <div class="cell">
-          <img src="img/Screenshot 2024-06-24 163443.png" alt="javascript logo">
-          <span>JavaScript</span>
-        </div>
-        
-        <div class="cell">
-          <img src="img/Screenshot 2024-06-24 163518.png" alt="node logo">
-          <span>Node.js</span>
-        </div>
-        
-        <div class="cell">
-          <img src="img/Screenshot 2024-06-24 163540.png" alt="react logo">
-          <span>React.js</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: Projects -->
-    <section id="testimony" class="testimony-section">
-      <h2>Projects</h2>
-
-      <div class="group">
-        <div class="person-details">
-          <img src="img/photo_2024-04-24_14-53-44.jpg">
-          <p>Social media Application</p>
-        </div>
-
-        <div class="person-details">
-            <img src="img/photo_2023-11-24_19-52-52.jpg">
-            <p>Quiz</p>
-  
-          </div>
-        
-          <div class="person-details">
-            <img src="img/Screenshot 2024-06-24 205614.png">
-            <p>Calculator</p>
-  
-          </div>
-
-        <!--div class="text">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque quaerat nostrum laborum? Rem adipisci natus eos nemo reprehenderit, cumque nostrum enim commodi. Eum, enim vero eveniet doloremque sed veniam. Doloremque explicabo non reprehenderit expedita! Accusamus mollitia repellendus dolorum officiis libero quod deleniti cum."
-        </div-->
-      </div>
-    </section>
-
-    <!-- SECTION 4: Contact -->
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
-
-      <div class="group">
-        <div class="text">
-          contact form!
-        </div>
-
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email">
-
-          <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-    <footer class="footer">
-        <div class="social-icons">
-        <a href="http://github.com" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github"></i>
-            <span>Github</span>
-          </a>
-          
-          <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>Linkedin</span>
-          </a>
-          
-        </div>
-
-          <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href=""#services">Services</a>
-            </li>
-            <li>
-                <a href=""#about">About Me</a>
-            </li>
-            <li>
-                <a href=""#contact">Contact</a>
-            </li>
-          </ul>
-    </footer>
-
-  </main>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2492270aa6.js" crossorigin="anonymous"></script>
 </body>
 </html>
